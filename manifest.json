@@ -4,7 +4,7 @@
         "exclude_globs":    [  ],
         "include_globs":    [ "*" ],
         "js":               [ "jquery.min.js","imperia.user.js" ],
-        "matches":          [   "https://www129.imperiaonline.org/*"],
+        "matches":          [   "https://*.imperiaonline.org/*"],
         "run_at": "document_end"
     } ],
     "description":  "Imperia online auto",
