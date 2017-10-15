@@ -1,0 +1,24 @@
+.SQ_active{
+	background-color:rgba(0,142,255,.4)
+}
+.SQ_List{
+	padding:0;margin:0;
+}
+.btnnn{
+	list-style-type:none;
+	cursor:pointer;
+	padding:5px;
+	padding-left:20px;
+}
+#SQ_menu_open{
+	position:fixed;
+	left:-15px;
+	top:45%;
+	border-top-right-radius:3px;
+	border-bottom-right-radius:3px;
+	transition:all 1s;
+	border-left:none
+}
+.margin_200{
+	margin-left:160px;
+}
