@@ -13,9 +13,10 @@ var SQ_FillUpArmy 		= function(){if(!$('#select-all-army').length)return;clearIn
 var SQ_sendAttack 		= function(){if(!$('button[name=sendAttack]').length)return;clearInterval(SQ_otherInterval);$('button[name=sendAttack]').click();SQ_closeAll();}
 var SQ_closeAll 		= function(){clearInterval(SQ_otherInterval);setTimeout(function(){	$.each($('.window-title').find('a.close'), function(){$(this)[0].click()});if(SQ_attackWorking == true){SQ_otherInterval = setInterval(function(){openTwierdza()},1000)}},2000);}
 var SQ_addButtons 		= function(){if($('.btnnn').length) return;
-	SQ_addBtn('<img src="https://maxcdn.icons8.com/Share/icon/Military//sword1600.png" style="margin-left:7px;width:27px; height:27px;">','SQ_autoattack', 'SQ_startattack');
+	SQ_addBtn('<div class="ui-bg ui-buttons" style="background-image:url(https://maxcdn.icons8.com/Share/icon/Military//sword1600.png);background-size:contain;"><a class="ui-small-icon "style="background-image:url(https://maxcdn.icons8.com/Share/icon/Military//sword1600.png);background-size:contain;" href="javascript:void(0);" rel="village-zoom"></a></div>','SQ_autoattack', 'SQ_startattack');
 }
 SQ_commitBtns();
 
 
 
+//<a class="ui-small-icon " href="javascript:void(0);" rel="village-zoom"></a>
