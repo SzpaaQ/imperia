@@ -1,0 +1,13 @@
+{
+    "manifest_version": 2,
+    "content_scripts": [ {
+        "exclude_globs":    [  ],
+        "include_globs":    [ "*" ],
+        "js":               [ "jquery.min.js","imperia.user.js" ],
+        "matches":          [   "https://www129.imperiaonline.org/*"],
+        "run_at": "document_end"
+    } ],
+    "description":  "Imperia online auto",
+    "name":         "SQ imperia script",
+    "version":      "1"
+}
