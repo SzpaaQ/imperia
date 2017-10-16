@@ -2,7 +2,7 @@ var SQ_most 			= 0,SQ_choosen, SQ_sent = false, SQ_attackWorking = false, SQ_oth
 var SQ_addBtn 			= function(text, fn,c){SQ_btns.push('<div class="'+c+' pull-right" onclick="'+fn+'()">'+text+'</div>');}
 var SQ_commitBtns 		= function(){SQ_addButtons();$('.ui-bottom-right').append(SQ_btns.join(''));}
 var SQ_autoattack 		= function(){if(SQ_attackWorking == false){SQ_otherInterval = setInterval(function(){openTwierdza()},1000);$('.SQ_startattack').find('.ui-buttons').css('background-color','rgba(255,255,255,.7)');SQ_attackWorking = true;}else{clearInterval(SQ_otherInterval);$('.SQ_startattack').find('.ui-buttons').css('background-color','rgba(0,0,0,0)');SQ_attackWorking = false;}}
-var openTwierdza 		= function(){if($('#widget-missions').find('.ui-icon').length) return;$('body').trigger(jQuery.Event( 'keyup', { keyCode: 67, which: 67 } ));clearInterval(SQ_otherInterval);SQ_otherInterval=setInterval(function(){openSpies()},1000)}
+var openTwierdza 		= function(){if($('#widget-missions').find('.mission-my').length) return;$('body').trigger(jQuery.Event( 'keyup', { keyCode: 67, which: 67 } ));clearInterval(SQ_otherInterval);SQ_otherInterval=setInterval(function(){openSpies()},1000)}
 var openSpies 			= function(){if(!$('#operation-center').find('.tab-espionage').find('a').length)return;clearInterval(SQ_otherInterval);$('#operation-center').find('.tab-espionage').find('a')[0].click();SQ_otherInterval = setInterval(function(){SQ_infiltrate()},1000)}
 var SQ_infiltrate 		= function(){if(!$('.infiltrate-all').length)return;clearInterval(SQ_otherInterval);$('.infiltrate-all')[0].click();SQ_otherInterval = setInterval(function(){SQ_chooseVictim()},1000)}
 var SQ_setVictim 		= function(v){SQ_chosen = v.find('.attack');}
