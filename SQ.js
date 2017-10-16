@@ -1,6 +1,6 @@
 var SQ_most 			= 0,SQ_choosen, SQ_sent = false, SQ_attackWorking = false, SQ_otherInterval, SQ_btns = [];
-var SQ_addBtn 			= function(text, fn,c){SQ_btns.push('<li class="btnnn '+c+'" onclick="'+fn+'()">'+text+'</li>');}
-var SQ_commitBtns 		= function(){SQ_addButtons();$('body').append('<div id="SQ_menu_open" class="SQ_menutogle"><ul class="SQ_List">'+SQ_btns.join('')+'</ul></div></div>');}
+var SQ_addBtn 			= function(text, fn,c){SQ_btns.push('<div class="'+c+' pull-right" onclick="'+fn+'()">'+text+'</div>');}
+var SQ_commitBtns 		= function(){SQ_addButtons();$('.ui-bottom-right').append(SQ_btns.join(''));}
 var SQ_autoattack 		= function(){if(SQ_attackWorking == false){SQ_otherInterval = setInterval(function(){openTwierdza()},1000);$('.SQ_startattack').find('.ui-buttons').css('background-color','rgba(255,255,255,.7)');SQ_attackWorking = true;}else{clearInterval(SQ_otherInterval);$('.SQ_startattack').find('.ui-buttons').css('background-color','rgba(0,0,0,0)');SQ_attackWorking = false;}}
 var openTwierdza 		= function(){if($('#widget-missions').find('.ui-icon').length) return;$('body').trigger(jQuery.Event( 'keyup', { keyCode: 67, which: 67 } ));clearInterval(SQ_otherInterval);SQ_otherInterval=setInterval(function(){openSpies()},1000)}
 var openSpies 			= function(){if(!$('#operation-center').find('.tab-espionage').find('a').length)return;clearInterval(SQ_otherInterval);$('#operation-center').find('.tab-espionage').find('a')[0].click();SQ_otherInterval = setInterval(function(){SQ_infiltrate()},1000)}
@@ -14,7 +14,3 @@ var SQ_addButtons 		= function(){if($('.btnnn').length) return;
 	SQ_addBtn('<div class="ui-bg ui-buttons"><a class="ui-small-icon "style="background-image:url(https://maxcdn.icons8.com/Share/icon/Military//sword1600.png);background-size:contain;" href="javascript:void(0);" rel="village-zoom"></a></div>','SQ_autoattack', 'SQ_startattack');
 }
 SQ_commitBtns();
-
-
-
-//<a class="ui-small-icon " href="javascript:void(0);" rel="village-zoom"></a>
