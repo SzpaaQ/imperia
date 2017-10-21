@@ -21,3 +21,4 @@ var SQ_addButtons 		= function(){if($('.btnnn').length) return;
 }
 SQ_commitBtns();
 
+/* SzpaQ scripts */
