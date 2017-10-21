@@ -17,8 +17,7 @@ var SQ_closeAll 		= function(){clearInterval(SQ_otherInterval);
 	setTimeout(function(){	$.each($('.window-title').find('a.close'), function(){$(this)[0].click()});if(SQ_attackWorking == true){SQ_otherInterval = setInterval(function(){spy()},1000)}},2000);}
 var SQ_addButtons 		= function(){if($('.btnnn').length) return;
 	SQ_addBtn('<div class="ui-bg ui-buttons"><a class="ui-small-icon "style="background-image:url(https://maxcdn.icons8.com/Share/icon/Military//sword1600.png);background-size:contain;" href="javascript:void(0);" rel="village-zoom"></a></div>','SQ_autoattack', 'SQ_startattack');
-	SQ_btns.push('<select onchange="SQ_setLvl(this)"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7" selected>7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>');
+	SQ_btns.push('<select onchange="SQ_setLvl(this)"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option></select>');
 }
-SQ_setLvl(7);
 SQ_commitBtns();
 
