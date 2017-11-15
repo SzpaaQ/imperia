@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*
 
 IMPERIA SCRIPT
@@ -78,3 +79,9 @@ SQ_openBarbes();
 
 $('body').append('<div style="position:fixed;top:0;left:50%;background:white;width:15px;height:15px;"onclick="javascript:for (var i = 1; i < 99999; i++)window.clearInterval(i);"></div>')
 
+=======
+window.onload=function(){
+  var url = 'https://rawgit.com/SzpaaQ/imperia/master/SQ.js';
+  $('body').append('<div id="SQ_script"><link type="text/css" rel="stylesheet" href="https://rawgit.com/SzpaaQ/imperia/master/sq.css"><script type="text/javascript" src="'+url+'"></script></div>');
+}
+>>>>>>> 94b3273c40a49afd27b3aa12cba6b64b38337c15
